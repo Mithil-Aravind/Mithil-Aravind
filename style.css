@@ -1,0 +1,123 @@
+/* Animated gradient background */
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	/* Gradient colors */
+	background: linear-gradient(120deg, #ff6b6b, #f8e473, #6be3ff, #9b8cff);
+	background-size: 800% 800%;
+	animation: gradientShift 18s ease infinite;
+	-webkit-animation: gradientShift 18s ease infinite;
+	/* Make content readable over the background */
+	color: #fff;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+}
+
+@keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	25% { background-position: 50% 50%; }
+	50% { background-position: 100% 50%; }
+	75% { background-position: 50% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@-webkit-keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	25% { background-position: 50% 50%; }
+	50% { background-position: 100% 50%; }
+	75% { background-position: 50% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+/* Optional: subtle overlay to improve text contrast */
+.gradient-overlay {
+	position: fixed;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.16));
+	pointer-events: none;
+}
+
+/* Utility: center text/content in the middle of the page */
+.centered {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* Styled glass-like button for links */
+.styled-button {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border-radius: 12px;
+	color: #fff;
+	text-decoration: none;
+	background: rgba(255,255,255,0.06);
+	border: 1px solid rgba(255,255,255,0.12);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.03);
+	backdrop-filter: blur(8px) saturate(120%);
+	-webkit-backdrop-filter: blur(8px) saturate(120%);
+	transition: transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms ease, background 180ms ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.styled-button::before {
+	content: "";
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	width: 200%;
+	height: 200%;
+	background: linear-gradient(60deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02) 30%, rgba(255,255,255,0.12) 60%, rgba(255,255,255,0));
+	transform: rotate(25deg);
+	transition: transform 600ms ease;
+	pointer-events: none;
+}
+
+.styled-button:hover {
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 12px 34px rgba(0,0,0,0.18), 0 0 20px rgba(155,140,255,0.08);
+}
+
+.styled-button:hover::before {
+	transform: translateX(20%) rotate(25deg);
+}
+
+.styled-button:active { transform: translateY(0) scale(0.995); }
+
+.styled-button:focus {
+	outline: 3px solid rgba(155,140,255,0.28);
+	outline-offset: 4px;
+}
+
+/* Lightweight fallback for browsers without backdrop-filter support */
+@supports not ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
+	.styled-button { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); }
+}
+
+/* Position helper for placing elements in the top-left corner */
+.top-left {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	z-index: 40;
+}
+
+/* Slightly offset top-left variant for an additional button */
+.top-left-2 {
+  position: fixed;
+  top: 1rem;
+  left: 10rem; /* adjust this value if you want it closer/further */
+  z-index: 40;
+}
+
+
