@@ -120,4 +120,38 @@ body {
   z-index: 40;
 }
 
+/* Cookie button styles (pure CSS) */
+.cookie-button {
+	--size: 160px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background: radial-gradient(circle at 30% 25%, #f7d99b 0 18%, #f1c77a 18% 60%, #e7b867 60% 100%);
+	box-shadow: inset -8px -10px 18px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.18);
+	border: 1px solid rgba(0,0,0,0.08);
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.cookie-button:active { transform: scale(0.98) translateY(1px); }
+
+/* chocolate chips using pseudo-elements */
+.cookie-button::before,
+.cookie-button::after { content: ""; position: absolute; }
+.cookie-button .chip { position: absolute; width: 18px; height: 14px; background: linear-gradient(180deg,#3b2b1b,#2b1a11); border-radius: 6px; transform: rotate(-10deg); box-shadow: inset -2px -2px 3px rgba(255,255,255,0.06); }
+.cookie-button .chip:nth-child(1){ left:28%; top:22%; transform: rotate(-15deg) scale(1.1); }
+.cookie-button .chip:nth-child(2){ left:60%; top:18%; transform: rotate(6deg); }
+.cookie-button .chip:nth-child(3){ left:40%; top:46%; transform: rotate(-30deg) scale(0.95); }
+.cookie-button .chip:nth-child(4){ left:22%; top:58%; transform: rotate(8deg) scale(0.9); }
+.cookie-button .chip:nth-child(5){ left:62%; top:64%; transform: rotate(-5deg) scale(1.0); }
+.cookie-button .chip:nth-child(6){ left:48%; top:76%; transform: rotate(10deg) scale(0.85); }
+
+/* small highlight specks */
+.cookie-button .speck { position:absolute; width:6px; height:4px; background: rgba(255,255,255,0.35); border-radius:2px; filter: blur(0.2px); }
+.cookie-button .speck:nth-child(7){ left:36%; top:30%; transform: rotate(12deg); }
+.cookie-button .speck:nth-child(8){ left:55%; top:30%; transform: rotate(-8deg); }
+
+
 
