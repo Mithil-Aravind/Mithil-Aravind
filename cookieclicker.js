@@ -15,7 +15,9 @@ function updateScoreDisplay() {
 }
 
 function addScore() {
-  score += 1;
+  // increment amount increases by 1 for each 100 points reached
+  const increment = 1 + Math.floor(score / 100);
+  score += increment;
   // persist immediately
   try { localStorage.setItem('cookieScore', String(score)); } catch (e) {}
   updateScoreDisplay();
