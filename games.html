@@ -11,6 +11,14 @@
                 <h1 style="margin:0 0 0.5rem;">Cookie Clicker</h1>
                 <p style="margin:0 0 1rem; text-align:left;">Click the cookie to earn points!</p>
                 <button id="cookiebutton" class="cookie-button" aria-label="Cookie button"></button>
+                <div id="upgrades" style="margin-top:1.25rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <div style="width:100%; text-align:center; color:#fff; margin-bottom:0.5rem;">Threshold Upgrades (claim when you reach a score)</div>
+                                        <div style="display:flex; align-items:center; gap:0.5rem; justify-content:center;">
+                                            <button id="scroll-left" class="styled-button" aria-label="Scroll upgrades left">◀</button>
+                                            <div id="threshold-upgrades" style="display:flex; gap:0.5rem; justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:70vw; padding-bottom:0.5rem;"></div>
+                                            <button id="scroll-right" class="styled-button" aria-label="Scroll upgrades right">▶</button>
+                                        </div>
+                </div>
             </div>
         </div>
         <script src="cookieclicker.js"></script>

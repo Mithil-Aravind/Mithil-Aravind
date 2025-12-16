@@ -44,13 +44,16 @@ body {
 
 /* Utility: center text/content in the middle of the page */
 .centered {
-	position: fixed;
-	inset: 0;
+	/* allow page to scroll — keep content horizontally centered but flow vertically */
+	position: relative;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	text-align: center;
-	padding: 1rem;
+	padding: 2.5vh 1rem 4rem 1rem;
+	min-height: 100vh;
+	box-sizing: border-box;
 }
 
 /* Styled glass-like button for links */
@@ -123,9 +126,9 @@ body {
 /* Cookie button styles (pure CSS) */
 .cookie-button {
 	--size: 360px;
- 	width: var(--size);
- 	height: var(--size);
- 	border-radius: 100px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
  	/* simple brown circle */
  	background: radial-gradient(circle at 30% 30%, #c17c3a 0 20%, #a65f2a 20% 60%, #7a4318 60% 100%);
  	box-shadow: inset -6px -6px 12px rgba(0,0,0,0.18), 0 6px 18px rgba(0,0,0,0.2);
@@ -153,6 +156,29 @@ body {
 .cookie-button .speck { position:absolute; width:6px; height:4px; background: rgba(255,255,255,0.35); border-radius:2px; filter: blur(0.2px); }
 .cookie-button .speck:nth-child(7){ left:36%; top:30%; transform: rotate(12deg); }
 .cookie-button .speck:nth-child(8){ left:55%; top:30%; transform: rotate(-8deg); }
+
+
+
+/* Threshold upgrades container: horizontal scroll */
+#threshold-upgrades {
+	display: flex;
+	gap: 0.75rem;
+	overflow-x: auto;
+	padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+	max-width: 90vw;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+}
+
+#threshold-upgrades > div {
+	flex: 0 0 auto;
+	scroll-snap-align: center;
+	min-width: 140px;
+}
+
+.upgrade-card { display:flex; flex-direction:column; align-items:center; gap:0.25rem; }
+
+.styled-button.small { padding:0.5rem 0.75rem; font-size:0.95rem; }
 
 
 
