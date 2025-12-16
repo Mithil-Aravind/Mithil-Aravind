@@ -44,7 +44,28 @@ const thresholdDefs = [
   { t:700,  id:'t700',  title:'Factory',       bonus:10, auto:3,  desc:'+10 per click & +3 auto' },
   { t:800,  id:'t800',  title:'Conveyor',      bonus:0,  auto:5,  desc:'+5 auto-clickers' },
   { t:900,  id:'t900',  title:'Elite Oven',    bonus:20, auto:5,  desc:'+20 per click & +5 auto' },
-  { t:1000, id:'t1000', title:'Grand Machine', bonus:0,  auto:10, desc:'+10 auto-clickers' }
+  { t:1000, id:'t1000', title:'Grand Machine', bonus:0,  auto:10, desc:'+10 auto-clickers' },
+  // Million-tier upgrades (1M to 20M)
+  { t:1000000,  id:'t1m',   title:'Million Milestone', bonus:50,   auto:10,  desc:'+50 per click & +10 auto' },
+  { t:2000000,  id:'t2m',   title:'Double Power',      bonus:100,  auto:20,  desc:'+100 per click & +20 auto' },
+  { t:3000000,  id:'t3m',   title:'Triple Blast',      bonus:150,  auto:30,  desc:'+150 per click & +30 auto' },
+  { t:4000000,  id:'t4m',   title:'Quad Surge',        bonus:0,    auto:50,  desc:'+50 auto-clickers' },
+  { t:5000000,  id:'t5m',   title:'Pentagram Boost',   bonus:250,  auto:50,  desc:'+250 per click & +50 auto' },
+  { t:6000000,  id:'t6m',   title:'Hexagon Ascend',    bonus:300,  auto:75,  desc:'+300 per click & +75 auto' },
+  { t:7000000,  id:'t7m',   title:'Septenary Glory',   bonus:400,  auto:100, desc:'+400 per click & +100 auto' },
+  { t:8000000,  id:'t8m',   title:'Octane Rush',       bonus:0,    auto:150, desc:'+150 auto-clickers' },
+  { t:9000000,  id:'t9m',   title:'Niner Nova',        bonus:500,  auto:150, desc:'+500 per click & +150 auto' },
+  { t:10000000, id:'t10m',  title:'Decagon Dynasty',   bonus:600,  auto:200, desc:'+600 per click & +200 auto' },
+  { t:11000000, id:'t11m',  title:'Hendeca Surge',     bonus:700,  auto:250, desc:'+700 per click & +250 auto' },
+  { t:12000000, id:'t12m',  title:'Dozen Triumph',     bonus:0,    auto:300, desc:'+300 auto-clickers' },
+  { t:13000000, id:'t13m',  title:'Lucky 13 Charm',    bonus:800,  auto:300, desc:'+800 per click & +300 auto' },
+  { t:14000000, id:'t14m',  title:'Fortnight Bliss',   bonus:900,  auto:350, desc:'+900 per click & +350 auto' },
+  { t:15000000, id:'t15m',  title:'Pentadecimal Peak', bonus:1000, auto:400, desc:'+1000 per click & +400 auto' },
+  { t:16000000, id:'t16m',  title:'Hexadecimal Halo',  bonus:0,    auto:500, desc:'+500 auto-clickers' },
+  { t:17000000, id:'t17m',  title:'Septendecimal Sage', bonus:1100, auto:500, desc:'+1100 per click & +500 auto' },
+  { t:18000000, id:'t18m',  title:'Octodecimal Apex',  bonus:1200, auto:600, desc:'+1200 per click & +600 auto' },
+  { t:19000000, id:'t19m',  title:'Novemdecimal Nova', bonus:1300, auto:700, desc:'+1300 per click & +700 auto' },
+  { t:20000000, id:'t20m',  title:'Vicenary Victory',  bonus:1500, auto:1000, desc:'+1500 per click & +1000 auto' }
 ];
 
 // Render threshold upgrades (horizontal scrollable list)
