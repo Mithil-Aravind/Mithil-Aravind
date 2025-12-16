@@ -139,6 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // render threshold upgrades on load
   renderThresholdUpgrades();
   attachUpgradeWheelHandler();
+  // wire reset button
+  const resetBtn = document.getElementById('reset-progress');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Reset score and all purchases? This cannot be undone.')) resetProgress();
+    });
+  }
 });
 
 // When the mouse wheel is used over the horizontal upgrades strip,
@@ -161,6 +168,23 @@ function attachUpgradeWheelHandler() {
     window.scrollBy({ top: e.deltaY, left: 0, behavior: 'auto' });
     e.preventDefault();
   }, { passive: false });
+}
+
+// Reset progress: clear stored values and reset runtime state
+function resetProgress() {
+  // clear localStorage keys used by the game
+  try {
+    localStorage.removeItem('cookieScore');
+    localStorage.removeItem('cookieBonus');
+    localStorage.removeItem('cookieAuto');
+    localStorage.removeItem('cookieClaimed');
+  } catch (e) {}
+  // reset runtime variables
+  score = 0;
+  bonusPerClick = 0;
+  autoClickers = 0;
+  claimedUpgrades = {};
+  updateScoreDisplay();
 }
 
 // Upgrade logic
