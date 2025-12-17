@@ -45,6 +45,18 @@ const thresholdDefs = [
   { t:800,  id:'t800',  title:'Conveyor',      bonus:0,  auto:5,  desc:'+5 auto-clickers' },
   { t:900,  id:'t900',  title:'Elite Oven',    bonus:20, auto:5,  desc:'+20 per click & +5 auto' },
   { t:1000, id:'t1000', title:'Grand Machine', bonus:0,  auto:10, desc:'+10 auto-clickers' },
+  // Mid-tier upgrades (50k to 900k)
+  { t:50000,  id:'t50k',  title:'50k Milestone',  bonus:5,   auto:2,  desc:'+5 per click & +2 auto' },
+  { t:100000, id:'t100k', title:'100k Milestone', bonus:10,  auto:3,  desc:'+10 per click & +3 auto' },
+  { t:200000, id:'t200k', title:'200k Milestone', bonus:20,  auto:5,  desc:'+20 per click & +5 auto' },
+  { t:300000, id:'t300k', title:'300k Milestone', bonus:30,  auto:6,  desc:'+30 per click & +6 auto' },
+  { t:400000, id:'t400k', title:'400k Milestone', bonus:40,  auto:8,  desc:'+40 per click & +8 auto' },
+  { t:500000, id:'t500k', title:'500k Milestone', bonus:50,  auto:10, desc:'+50 per click & +10 auto' },
+  { t:600000, id:'t600k', title:'600k Milestone', bonus:60,  auto:12, desc:'+60 per click & +12 auto' },
+  { t:700000, id:'t700k', title:'700k Milestone', bonus:70,  auto:15, desc:'+70 per click & +15 auto' },
+  { t:800000, id:'t800k', title:'800k Milestone', bonus:80,  auto:18, desc:'+80 per click & +18 auto' },
+  { t:900000, id:'t900k', title:'900k Milestone', bonus:90,  auto:20, desc:'+90 per click & +20 auto' },
+
   // Million-tier upgrades (1M to 20M)
   { t:1000000,  id:'t1m',   title:'Million Milestone', bonus:50,   auto:10,  desc:'+50 per click & +10 auto' },
   { t:2000000,  id:'t2m',   title:'Double Power',      bonus:100,  auto:20,  desc:'+100 per click & +20 auto' },
