@@ -79,7 +79,8 @@ const thresholdDefs = [
   { t:19000000, id:'t19m',  title:'Novemdecimal Nova', bonus:1300, auto:700, desc:'+1300 per click & +700 auto' },
   { t:20000000, id:'t20m',  title:'Vicenary Victory',  bonus:1500, auto:1000, desc:'+1500 per click & +1000 auto' },
   { t:50000000, id:'t50m',  title:'Golden Cookie', bonus:100000, auto:10000, desc:'+100000 per click & +10000 auto' },
-  { t:100000000000, id:'t100b',  title:'Diamond Cookie', bonus:100000000, auto:10000000, desc:'+100000000 per click & +10000000 auto' }
+  { t:100000000000, id:'t100b',  title:'Diamond Cookie', bonus:100000000, auto:10000000, desc:'+100000000 per click & +10000000 auto' },
+  { t:100000000000000, id:'t100t',  title:'Rainbow Cookie', bonus:10000000000, auto:1000006, desc:'+1000006 per click & +1e6 auto' }
 ];
 
 // Render threshold upgrades (horizontal scrollable list)
